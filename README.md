@@ -3,3 +3,6 @@ Tests
 
 
 SELF_SIGNED_CERT_IN_CHAIN   Hatası Çözüm ;
+
+bower.json dosyasına aşağıdaki parametreyi eklemek gerekiyor. 
+{ "strict-ssl": false }
