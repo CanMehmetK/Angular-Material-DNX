@@ -1,0 +1,17 @@
+{
+  "name": "material-design-variables",
+  "version": "0.1.1",
+  "main": "variables.less",
+  "dependencies": {},
+  "homepage": "https://github.com/fahad19/material-design-variables",
+  "_release": "0.1.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.1.1",
+    "commit": "fc0a6f4871c002a3b859926d0aa897cbaca9912e"
+  },
+  "_source": "git://github.com/fahad19/material-design-variables.git",
+  "_target": "~0.1.1",
+  "_originalSource": "material-design-variables",
+  "_direct": true
+}

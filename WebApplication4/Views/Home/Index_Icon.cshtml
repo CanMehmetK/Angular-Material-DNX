@@ -1,0 +1,468 @@
+﻿@{
+    ViewData["Title"] = "Ana Sayfa";
+}
+<style>
+    .icondemoLoadSvgIconsFromUrl md-progress-circular {
+        margin-bottom: 20px;
+    }
+
+    .icondemoLoadSvgIconsFromUrl md-icon {
+        margin: 20px;
+        margin-top: 0;
+        width: 24px;
+        height: 24px;
+    }
+
+    .icondemoLoadSvgIconsFromUrl .demo-content {
+        min-height: 210px;
+    }
+
+    .icondemoLoadSvgIconsFromUrl .appDemoSvgIcons {
+        padding: 25px;
+    }
+
+    .icondemoLoadSvgIconsFromUrl .s24 {
+        width: 24px;
+        height: 24px;
+        color: #f00;
+    }
+
+    .icondemoLoadSvgIconsFromUrl .s36 {
+        width: 36px;
+        height: 36px;
+        color: #0f0;
+    }
+
+    .icondemoLoadSvgIconsFromUrl .s48 {
+        width: 48px;
+        height: 48px;
+        color: #00f;
+    }
+</style>
+<style>
+    .icondemoFontIconsWithLigatures {
+        /* Rules for sizing the icon.*/
+        /* Rules for using icons as black on a light background.*/
+        /* Rules for using icons as white on a dark background.*/
+    }
+
+        .icondemoFontIconsWithLigatures .appDemoFontIconsWithLigatures {
+            padding: 25px;
+            width: 100%;
+        }
+
+            .icondemoFontIconsWithLigatures .appDemoFontIconsWithLigatures,
+            .icondemoFontIconsWithLigatures .appDemoFontIconsWithLigatures *:before,
+            .icondemoFontIconsWithLigatures .appDemoFontIconsWithLigatures *:after {
+                box-sizing: border-box;
+            }
+
+        .icondemoFontIconsWithLigatures header {
+            overflow: hidden;
+        }
+
+            .icondemoFontIconsWithLigatures header h1 {
+                color: #888;
+                font-size: 36px;
+                font-weight: 300;
+            }
+
+        .icondemoFontIconsWithLigatures .container {
+            margin: 0 auto;
+            max-width: 1200px;
+            min-width: 960px;
+            padding: 40px 40px;
+            font: 14px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        .icondemoFontIconsWithLigatures .glyph {
+            border-bottom: 1px dotted #ccc;
+            padding: 10px 0 20px;
+            margin-bottom: 20px;
+        }
+
+        .icondemoFontIconsWithLigatures .preview-scale,
+        .icondemoFontIconsWithLigatures .preview-glyphs {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .icondemoFontIconsWithLigatures .preview-scale {
+            color: #888;
+            font-size: 12px;
+            margin-top: 24px;
+        }
+
+        .icondemoFontIconsWithLigatures .step {
+            flex-grow: 1;
+            line-height: 0.5;
+        }
+
+        .icondemoFontIconsWithLigatures .usage {
+            margin-top: 10px;
+        }
+
+            .icondemoFontIconsWithLigatures .usage input {
+                font-family: monospace;
+                text-align: center;
+            }
+
+            .icondemoFontIconsWithLigatures .usage .point {
+                width: 150px;
+            }
+
+            .icondemoFontIconsWithLigatures .usage .class {
+                width: 250px;
+            }
+
+        .icondemoFontIconsWithLigatures .material-icons.md-18 {
+            font-size: 18px;
+        }
+
+        .icondemoFontIconsWithLigatures .material-icons.md-24 {
+            font-size: 24px;
+        }
+
+        .icondemoFontIconsWithLigatures .material-icons.md-36 {
+            font-size: 36px;
+        }
+
+        .icondemoFontIconsWithLigatures .material-icons.md-48 {
+            font-size: 48px;
+        }
+
+        .icondemoFontIconsWithLigatures .material-icons.md-dark {
+            color: rgba(0, 0, 0, 0.54);
+        }
+
+            .icondemoFontIconsWithLigatures .material-icons.md-dark.md-inactive {
+                color: rgba(0, 0, 0, 0.26);
+            }
+
+        .icondemoFontIconsWithLigatures .material-icons.md-light {
+            color: white;
+        }
+
+            .icondemoFontIconsWithLigatures .material-icons.md-light.md-inactive {
+                color: rgba(255, 255, 255, 0.3);
+            }
+</style>
+<style>
+.icondemoFontIconsWithClassnames {
+  /* Bootstrap Overrides */
+  /* OLD STYLES */ }
+  .icondemoFontIconsWithClassnames .appDemoFontIconsWithClassnames {
+    padding: 25px;
+    width: 100%; }
+  .icondemoFontIconsWithClassnames .appDemoFontIconsWithClassnames,
+  .icondemoFontIconsWithClassnames .appDemoFontIconsWithClassnames *:before,
+  .icondemoFontIconsWithClassnames .appDemoFontIconsWithClassnames *:after {
+    box-sizing: border-box; }
+  .icondemoFontIconsWithClassnames [class^="icon-"]:before,
+  .icondemoFontIconsWithClassnames [class*=" icon-"]:before {
+    font-family: "icomoon";
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: inherit;
+    text-transform: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+  .icondemoFontIconsWithClassnames .icon-home:before {
+    content: "\e900"; }
+  .icondemoFontIconsWithClassnames .icon-clock:before {
+    content: "\e94e"; }
+  .icondemoFontIconsWithClassnames .icon-user-plus:before {
+    content: "\e973"; }
+  .icondemoFontIconsWithClassnames .icon-google-plus2:before {
+    content: "\ea89"; }
+  .icondemoFontIconsWithClassnames .icon-youtube4:before {
+    content: "\ea9a"; }
+  .icondemoFontIconsWithClassnames .icon-settings:before {
+    content: "\e600"; }
+  .icondemoFontIconsWithClassnames md-progress-circular {
+    margin-bottom: 20px; }
+  .icondemoFontIconsWithClassnames header {
+    overflow: hidden; }
+  .icondemoFontIconsWithClassnames header h1 {
+    color: #888;
+    font-size: 36px;
+    font-weight: 300; }
+  .icondemoFontIconsWithClassnames .container {
+    margin: 0 auto;
+    max-width: 1200px;
+    min-width: 960px;
+    padding: 40px 40px;
+    font: 14px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  .icondemoFontIconsWithClassnames .glyph {
+    border-bottom: 1px dotted #ccc;
+    padding: 10px 0 20px;
+    margin-bottom: 20px; }
+  .icondemoFontIconsWithClassnames .preview-scale,
+  .icondemoFontIconsWithClassnames .preview-glyphs {
+    display: flex;
+    flex-direction: row; }
+  .icondemoFontIconsWithClassnames .preview-scale {
+    color: #888;
+    font-size: 12px;
+    margin-top: 24px; }
+  .icondemoFontIconsWithClassnames .step {
+    flex-grow: 1;
+    line-height: 0.5; }
+  .icondemoFontIconsWithClassnames .usage {
+    margin-top: 10px; }
+  .icondemoFontIconsWithClassnames .usage input {
+    font-family: monospace;
+    text-align: center; }
+  .icondemoFontIconsWithClassnames .usage .point {
+    width: 150px; }
+  .icondemoFontIconsWithClassnames .usage .class {
+    width: 250px; }
+  .icondemoFontIconsWithClassnames md-radio-button {
+    display: inline-block; }
+  .icondemoFontIconsWithClassnames .loading {
+    background-color: black;
+    filter: alpha(opacity=40);
+    height: 100%;
+    left: 0;
+    opacity: .40;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 90; }
+  .icondemoFontIconsWithClassnames .loading md-progress-circular {
+    left: 50%;
+    position: fixed;
+    top: 48%;
+    z-index: 100; }
+</style>
+
+
+<section class="demo-container">
+    <md-toolbar class="demo-toolbar">
+        <div class="md-toolbar-tools">
+            <h3>Font Icons With Classnames</h3>
+        </div>
+    </md-toolbar>
+    <div class="md-whiteframe-z1 docs-list">
+        <div ng-controller="FontIconsWithClassnamesCtrl" ng-cloak class="icondemoFontIconsWithClassnames">
+            <p>Display 5 font-icons, each with different sizes and colors</p>
+            <!-- Display font icons from Icomoon.io: -->
+            <div class="glyph" ng-repeat="font in fonts" layout="row">
+                <div ng-repeat="it in sizes" flex layout-align="center center" style="text-align: center;" layout="column">
+                    <div flex></div>
+                    <div class="preview-glyphs">
+                        <md-icon md-font-icon="{{ font.name }}"
+                                 ng-style="{color: !font.theme && font.color, 'font-size': it.size + 'px', height: it.size + 'px'}"
+                                 ng-class="font.theme"
+                                 aria-label="{{ font.name + it.size }}"
+                                 class="step "></md-icon>
+                    </div>
+                    <div class="preview-scale">
+                        <span class="step" style="padding-left:{{ it.padding }}px">{{ it.size }}px</span>
+                    </div>
+                </div>
+            </div>
+            <!-- For this demo, include the font-faces needed by mdIcon above -->
+            <style>
+                @@font-face {
+                    font-family: "icomoon";
+                    src: url("https://cdn.rawgit.com/angular/material/master/docs/app/fonts/icomoon.eot");
+                    font-weight: normal;
+                    font-style: normal;
+                }
+
+                @@font-face {
+                    font-family: 'icomoon';
+                    src: url('https://cdn.rawgit.com/angular/material/master/docs/app/fonts/icomoon.eot?-cmq1um');
+                    src: url('https://cdn.rawgit.com/angular/material/master/docs/app/fonts/icomoon.eot?#iefix-cmq1um') format('embedded-opentype'), url('https://cdn.rawgit.com/angular/material/master/docs/app/fonts/icomoon.woff?-cmq1um') format('woff'), url('https://cdn.rawgit.com/angular/material/master/docs/app/fonts/icomoon.ttf?-cmq1um') format('truetype'), url('https://cdn.rawgit.com/angular/material/master/docs/app/fonts/icomoon.svg?-cmq1um#icomoon') format('svg');
+                    font-weight: normal;
+                    font-style: normal;
+                }
+            </style>
+        </div>
+    </div>
+</section>
+
+<section class="demo-container">
+    <md-toolbar class="demo-toolbar">
+        <div class="md-toolbar-tools">
+            <h3>Font Icons With Ligatures</h3>
+        </div>
+    </md-toolbar>
+    <div class="md-whiteframe-z1 docs-list">
+        <div ng-controller="FontIconsWithLigaturesCtrl" ng-cloak class="icondemoFontIconsWithLigatures">
+            <p>Display 4 Material Design font-icons using ligatures [instead of CSS names]; each with different sizes and colors<br /></p>
+            <!-- Display font icons from Icomoon.io: -->
+            <div class="glyph" ng-repeat="font in fonts" layout="row">
+                <div ng-repeat="it in sizes" flex layout-align="center center" style="text-align: center;" layout="column">
+                    <div flex></div>
+                    <div class="preview-glyphs">
+                        <md-icon ng-style="{color: font.color}"
+                                 aria-label="{{ font.name }}"
+                                 class="material-icons step"
+                                 ng-class="it.size">
+                            {{ font.name }}
+                        </md-icon>
+                    </div>
+                </div>
+            </div>
+            <p style="font-size:0.7em;padding-left: 25%">
+                <span style="color:darkblue; font-weight: bold">Cool Tip</span>:
+                Copy an icon and then paste in a text editor to see its textual name!
+            </p>
+            <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+                  rel="stylesheet">
+        </div>
+    </div>
+</section>
+
+
+<section class="demo-container">
+    <md-toolbar class="demo-toolbar">
+        <div class="md-toolbar-tools">
+            <h3>Load Svg Icons From Url</h3>
+        </div>
+    </md-toolbar>
+    <div class="md-whiteframe-z1 docs-list">
+        <div ng-controller="LoadSvgIconsFromUrlCtrl" ng-cloak layout="column" layout-margin ng-cloak class="icondemoLoadSvgIconsFromUrl">
+            <p>The simplest way to display a single SVG icon is by referencing it by URL:</p>
+            <p>
+                <md-icon md-svg-src="{{ insertDriveIconURL }}"
+                         aria-label="Insert Drive Icon">
+                </md-icon>
+            </p>
+            <p>Style the icon size and color with CSS:</p>
+            <p>
+                <md-icon md-svg-src="/img/icons/cake.svg" class="s24" aria-label="Cake"></md-icon>
+                <md-icon md-svg-src="{{ getAndroid() }}" class="s36" aria-label="Android "></md-icon>
+                <md-icon md-svg-src="/img/icons/addShoppingCart.svg" class="s48" aria-label="Cart"></md-icon>
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="demo-container">
+    <md-toolbar class="demo-toolbar">
+        <div class="md-toolbar-tools">
+            <h3>Svg Icon Sets</h3>
+        </div>
+    </md-toolbar>
+    <div class="md-whiteframe-z1 docs-list">
+        <div ng-controller="SvgIconSetsCtrl" layout="column" layout-margin ng-cloak>
+            <p>Display an icon from a pre-registered set of icons:</p>
+            <p>
+                <md-icon md-svg-icon="alarm" style="color: #0F0;" aria-label="Alarm Icon"></md-icon>
+                <md-icon md-svg-icon="social:cake" style="color: #f00;width:60px;height:60px;" aria-label="Cake Icon"></md-icon>
+                <md-icon md-svg-icon="social:people" style="color: #00F;" class="s48" aria-label="People Icon"></md-icon>
+            </p>
+        </div>
+    </div>
+</section>
+
+
+<section class="demo-container">
+    <md-toolbar class="demo-toolbar">
+        <div class="md-toolbar-tools">
+            <h3>Using Template Cache</h3>
+        </div>
+    </md-toolbar>
+    <div class="md-whiteframe-z1 docs-list">
+        <div ng-controller="UsingTemplateCacheCtrl" layout="column" layout-margin ng-cloak>
+            <p>
+                Pre-fetch with $http & cache SVG icons using $templateCache.<br />
+                <span class="note"> NOTE: Show the Source views for details...</span>
+            </p>
+            <p>
+                <md-icon md-svg-icon="core:alarm-add" style="color:#000;" aria-label="Add"></md-icon>
+                <md-icon md-svg-icon="core:alarm-off" style="color:#f00;" aria-label="Off"></md-icon>
+                <md-icon md-svg-icon="social:cake" style="color:#00F;" aria-label="Cake"></md-icon>
+                <md-icon md-svg-src="/img/icons/android.svg" style="color:#0F0;" aria-label="Android"></md-icon>
+            </p>
+        </div>
+
+    </div>
+</section>
+
+
+
+@section scripts{
+<script>
+    CrmApp
+    .controller('SvgIconSetsCtrl', function ($scope) {
+        // Nothing to do yet.... yield
+    })
+    .config(['$mdIconProvider', '$mdThemingProvider', function ($mdIconProvider, $mdThemingProvider) {
+        // Register icon IDs with sources. Future $mdIcon( <id> ) lookups
+        // will load by url and retrieve the data via the $http and $templateCache
+        $mdIconProvider
+            .defaultIconSet('/img/icons/sets/core-icons.svg', 24)
+            .iconSet('social', '/img/icons/sets/social-icons.svg', 24)
+            .iconSet('core', '/img/icons/sets/core-icons.svg', 24)
+            .icon('social:cake', '/img/icons/cake.svg', 24);
+
+        $mdThemingProvider.theme('default')
+               .primaryPalette("red")
+               .accentPalette('green')
+               .warnPalette('blue');
+    }])
+    .controller('FontIconsWithClassnamesCtrl', function ($scope) {
+        // Create list of font-icon names with color overrides
+        var iconData = [
+              { name: 'icon-home', color: "#777" },
+              { name: 'icon-user-plus', color: "rgb(89, 226, 168)" },
+              { name: 'icon-google-plus2', color: "#A00" },
+              { name: 'icon-youtube4', color: "#00A" },
+               // Use theming to color the font-icon
+              { name: 'icon-settings', color: "#A00", theme: "md-warn md-hue-5" }
+        ];
+        // Create a set of sizes...
+        $scope.sizes = [
+          { size: 48, padding: 10 },
+          { size: 36, padding: 6 },
+          { size: 24, padding: 2 },
+          { size: 12, padding: 0 }
+        ];
+        $scope.fonts = [].concat(iconData);
+    })
+    .controller('LoadSvgIconsFromUrlCtrl', function ($scope) {
+        $scope.insertDriveIconURL = '/img/icons/ic_insert_drive_file_24px.svg';
+        $scope.getAndroid = function () {
+            return '/img/icons/android.svg';
+        }
+    })
+    .controller('FontIconsWithLigaturesCtrl', function ($scope) {
+        // Specify a list of font-icons with ligatures and color overrides
+        var iconData = [
+              { name: 'accessibility', color: "#777" },
+              { name: 'question_answer', color: "rgb(89, 226, 168)" },
+              { name: 'backup', color: "#A00" },
+              { name: 'email', color: "#00A" }
+        ];
+        $scope.fonts = [].concat(iconData);
+        // Create a set of sizes...
+        $scope.sizes = [
+          { size: "md-18", padding: 0 },
+          { size: "md-24", padding: 2 },
+          { size: "md-36", padding: 6 },
+          { size: "md-48", padding: 10 }
+        ];
+    })
+    .controller('UsingTemplateCacheCtrl', function ($scope) { })
+              .run(function ($http, $templateCache) {
+                  var urls = [
+                    '/img/icons/sets/core-icons.svg',
+                    '/img/icons/cake.svg',
+                    '/img/icons/android.svg'
+                  ];
+                  // Pre-fetch icons sources by URL and cache in the $templateCache...
+                  // subsequent $http calls will look there first.
+                  angular.forEach(urls, function (url) {
+                      $http.get(url, { cache: $templateCache });
+                  });
+              });
+</script>
+}
