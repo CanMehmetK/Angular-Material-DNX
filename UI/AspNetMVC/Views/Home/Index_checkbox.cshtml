@@ -1,0 +1,178 @@
+﻿@{
+    ViewData["Title"] = "Ana Sayfa";
+}
+<style>
+    .checkboxdemoBasicUsage div.flex-xs {
+        min-height: 40px;
+    }
+
+    .checkboxdemoBasicUsage .checkboxDemo1 div {
+        clear: both;
+    }
+
+    .checkboxdemoBasicUsage .checkboxDemo1 md-checkbox {
+        float: left;
+    }
+
+    .checkboxdemoBasicUsage p {
+        padding-left: 8px;
+    }
+
+    .checkboxdemoBasicUsage fieldset.standard {
+        border-style: solid;
+        border-width: 1px;
+    }
+
+    .checkboxdemoBasicUsage legend {
+        color: #3F51B5;
+    }
+
+        .checkboxdemoBasicUsage legend code {
+            color: #3F51B5;
+            font-weight: normal;
+        }
+
+    .checkboxdemoBasicUsage .ipsum {
+        color: saddlebrown;
+    }
+</style>
+
+<section class="demo-container">
+    <md-toolbar class="demo-toolbar">
+        <div class="md-toolbar-tools">
+            <h3>Basic Usage</h3>
+        </div>
+    </md-toolbar>
+    <div class="md-whiteframe-z1 docs-list">
+        <div ng-controller="CheckBoxBasicUsageCtrl" class="md-padding" ng-cloak>
+            <div>
+                <fieldset class="standard">
+                    <legend>Using <code>ng-model</code></legend>
+                    <div layout="column" layout-wrap layout-gt-sm="row">
+                        <div flex-xs flex="50">
+                            <md-checkbox ng-model="data.cb1" aria-label="Checkbox 1">
+                                Checkbox 1: {{ data.cb1 }}
+                            </md-checkbox>
+                        </div>
+                        <div flex-xs flex="50">
+                            <div layout-xs="column" flex-xs="100">
+                                <md-checkbox ng-model="data.cb2"
+                                             aria-label="Checkbox 2"
+                                             ng-true-value="'yup'"
+                                             ng-false-value="'nope'"
+                                             class="md-warn md-align-top-left" flex>
+                                    Checkbox 2 (md-warn)  <br />
+                                    <span class="ipsum">
+                                        Duis placerat lectus et justo mollis, nec sodales orci congue. Vestibulum semper non urna ac suscipit.
+                                        Vestibulum tempor, ligula id laoreet hendrerit, massa augue iaculis magna,
+                                        sit amet dapibus tortor ligula non nibh.
+                                    </span>
+                                    <br />
+                                    {{ data.cb2 }}
+                                </md-checkbox>
+                            </div>
+                        </div>
+                        <div flex-xs flex="50">
+                            <md-checkbox ng-disabled="true" aria-label="Disabled checkbox" ng-model="data.cb3">
+                                Checkbox: Disabled
+                            </md-checkbox>
+                        </div>
+                        <div flex-xs flex="50">
+                            <md-checkbox ng-disabled="true" aria-label="Disabled checked checkbox" ng-model="data.cb4" ng-init="data.cb4=true">
+                                Checkbox: Disabled, Checked
+                            </md-checkbox>
+                        </div>
+                        <div flex-xs flex="50">
+                            <md-checkbox md-no-ink aria-label="Checkbox No Ink" ng-model="data.cb5" class="md-primary">
+                                Checkbox (md-primary): No Ink
+                            </md-checkbox>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+        Using ng-model
+
+    </div>
+</section>
+
+<section class="demo-container">
+    <md-toolbar class="demo-toolbar">
+        <div class="md-toolbar-tools">
+            <h3>Syncing</h3>
+        </div>
+    </md-toolbar>
+    <div class="md-whiteframe-z1 docs-list">
+        <div ng-controller="SyncingCtrl" class="md-padding" ng-cloak style="min-height:270px">
+            <div layout="row" layout-wrap>
+                <div flex="100" flex-gt-sm="50" layout="column">
+                    <div>
+                        <!--
+                          In IE, we cannot apply flex directly to <fieldset>
+                          @@see https://github.com/philipwalton/flexbugs#9-some-html-elements-cant-be-flex-containers
+                        -->
+                        <fieldset class="standard">
+                            <legend>Using <code>md-checkbox</code> with <code>ng-checked</code></legend>
+                            <div layout="row" layout-wrap flex>
+                                <div flex="50" ng-repeat="item in items">
+                                    <md-checkbox ng-checked="exists(item, selected)" ng-click="toggle(item, selected)">
+                                        {{ item }} <span ng-if="exists(item, selected)">selected</span>
+                                    </md-checkbox>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+                <div flex="100" flex-gt-sm="50" layout="column">
+                    <div>
+                        <fieldset class="standard">
+                            <legend>Using <code>&lt;input type="checkbox"&gt;</code></legend>
+                            <div layout="row" layout-wrap flex>
+                                <div ng-repeat="item in items" class="standard" flex="50">
+                                    <label>
+                                        <input type="checkbox" ng-checked="exists(item, selected)"
+                                               ng-click="toggle(item, selected)" />
+                                        {{ item }}
+                                    </label>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+                <div flex="100">
+                    <h2 class="md-title">Selected Items</h2>
+                    <code style="display: block; padding: 8px;">{{selected | json}}</code>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+@section scripts{
+<script>
+    CrmApp
+.controller('CheckBoxBasicUsageCtrl', function ($scope) {
+    $scope.data = {};
+    $scope.data.cb1 = true;
+    $scope.data.cb2 = false;
+    $scope.data.cb3 = false;
+    $scope.data.cb4 = false;
+    $scope.data.cb5 = false;
+}).controller('SyncingCtrl', function ($scope) {
+    $scope.items = [1, 2, 3, 4, 5];
+    $scope.selected = [];
+    $scope.toggle = function (item, list) {
+        var idx = list.indexOf(item);
+        if (idx > -1) list.splice(idx, 1);
+        else list.push(item);
+    };
+    $scope.exists = function (item, list) {
+        return list.indexOf(item) > -1;
+    };
+});;
+
+
+</script>
+        }
+
